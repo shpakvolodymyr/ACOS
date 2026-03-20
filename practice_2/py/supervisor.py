@@ -7,7 +7,6 @@ restarts = 0
 while restarts < MAX_RESTARTS:
     print(f"[Supervisor] Запуск worker.py (Спроба {restarts + 1} з {MAX_RESTARTS})")
     
-    # Запускаємо worker і чекаємо, поки він завершиться
     proc = subprocess.run(["python3", "worker.py"])
     
     print(f"[Supervisor] Worker завершився з кодом {proc.returncode}")
